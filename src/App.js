@@ -5,6 +5,7 @@ import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import Header from './components/header/header.component';
 
 const HatsPage = () => (
@@ -26,6 +27,12 @@ const TestPage = (props) => (
       </div>
     ))}
     <span>props.location.pathname <b>{props.location.pathname}</b></span><br />
+  
+    <h1>příliš žluťoučký kůň úpěl ďábelské ódy 1234567890</h1>
+    <h1>PŘÍLIŠ ŽLUŤOUČKÝ KŮŇ ÚPĚL ĎÁBELSKÉ ÓDY `@#$~^&*{`{}`}°%</h1>
+    <span>process.env.PUBLIC_URL <b>{process.env.PUBLIC_URL + '/photos/2019-07-01-brdy/DSC_8101.jpg'}</b></span><br />
+    <span>window.location.origin <b>{window.location.origin + '/photos/2019-07-01-brdy/DSC_8101.jpg'}</b></span><br />
+    <img style={{ width: 500 }} src="./photos/2019-07-01-brdy/DSC_8101.jpg" alt="brdy-2019" />
   </div>
 )
 
@@ -39,6 +46,7 @@ function App() {
         <Route path='/shop' component={ShopPage} />
         <Route exact path='/test' component={TestPage} />
         <Route path='/test/:id' component={TestPage} />
+        <Route path='/signin' component={SignInAndSignUpPage} />
       </Switch>
     </div>
   );
