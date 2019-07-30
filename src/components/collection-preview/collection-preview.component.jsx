@@ -7,7 +7,6 @@ import './collection-preview.styles.scss';
 const CollectionPreview = ({ title, routeName, items }) => (
   <div className='collection-preview'>
     <h1 className='title'>{title.toUpperCase()}</h1>
-    <span style={{ color: 'red' }} className='title'>{routeName}</span>
     <div className='preview'>
       {
         // items.map((item) => (
