@@ -3,6 +3,8 @@ import React from 'react';
 const TestPage = (props) => (
   <div style={{ border: '1px solid red', padding: 10 }}>
     <h1>TEST PAGE</h1>
+    
+    <span>process.env.NODE_ENV = <b>{process.env.NODE_ENV}</b></span><br />
 
     <h2 style={{ color: 'red', marginBottom: 0 }}>Firebase : <u>crwn-db-pavel-klos</u></h2>
     <a href="https://console.firebase.google.com/project/crwn-db-pavel-klos/authentication" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}><b>Firebase 'crwn-db-pavel-klos' : Authentication</b></a><br />
