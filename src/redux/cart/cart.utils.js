@@ -3,8 +3,8 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
   const existingCartItem = cartItems.find(
     cartItem => cartItem.id === cartItemToAdd.id
   );
-  console.log('existingCartItem', existingCartItem);
-  console.log(cartItemToAdd);
+  // console.log('existingCartItem', existingCartItem);
+  // console.log(cartItemToAdd);
 
   if (existingCartItem) {
     return cartItems.map(
