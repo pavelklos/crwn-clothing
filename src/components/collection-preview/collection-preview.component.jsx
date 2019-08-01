@@ -16,8 +16,10 @@ const CollectionPreview = ({ title, routeName, items }) => (
           .filter((item, idx) => idx < 4)
           // .map((item, idx) => (
             // <div key={item.id}>[{idx}] {item.id} - <b>{item.name}</b> - ${item.price}</div>
-          .map(({id, ...otherItemProps}) => (
-            <CollectionItem key={id} {...otherItemProps}/>
+          // .map(({id, ...otherItemProps}) => (
+          //   <CollectionItem key={id} {...otherItemProps}/>
+          .map((item) => (
+            <CollectionItem key={item.id} item={item}/>
         ))
       }
     </div>

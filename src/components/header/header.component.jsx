@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import Clock from '../clock/clock.component';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
@@ -14,9 +15,10 @@ const Header = ({ currentUser, hidden }) => (
   <div className='header'>
     <Link className='logo-container ' to='/'>
       <Logo className='logo' />
+      <Clock />
     </Link>
     <div className='options'>
-      <span className='user' style={{ color: '#00bfa5' }}>
+      <span className='user'>
         {currentUser && currentUser.email ? currentUser.email : ''}
       </span>
       <Link className='option' to='/shop'>SHOP</Link>
@@ -29,7 +31,7 @@ const Header = ({ currentUser, hidden }) => (
         <Link className='option' to='/signin'>SIGN IN</Link>
       }
       <Link className='option' to='/test'>TEST</Link>
-      <CartIcon itemCount={999} />
+      <CartIcon itemCount={57} />
     </div>
     { hidden ? null : <CartDropdown /> }
   </div>
